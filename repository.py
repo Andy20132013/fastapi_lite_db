@@ -26,7 +26,8 @@ class TaskRepository:
             #     print("------------")
             #     print(task_model.__dict__)
             # print("++++++++++++++++++++")
-            
+
             task_schemas = [STask.model_validate(
-                task_model.__dict__) for task_model in task_models]
+                # task_model.__dict__) for task_model in task_models]
+                task_model) for task_model in task_models]
             return task_schemas
